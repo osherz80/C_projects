@@ -4,12 +4,16 @@ let operand;
 const addDisplay = () =>{
     if (document.getElementById('drill').innerHTML == 0 && event.target.innerHTML != "." && document.getElementById('drill').innerHTML.length == 1)  document.getElementById('drill').innerHTML = event.target.innerHTML;
     else document.getElementById('drill').innerHTML += event.target.innerHTML;
+    if(sum === 0) document.querySelector(".left").innerHTML = document.getElementById('drill').innerHTML;
+    else document.querySelector(".right").innerHTML = document.getElementById('drill').innerHTML;
 };
 
 
 
 const deleteEnd = () =>{
     document.getElementById('drill').innerHTML = document.getElementById('drill').innerHTML.substring(0,document.getElementById('drill').innerHTML.length-1);
+    if(sum === 0) document.querySelector(".left").innerHTML = document.getElementById('drill').innerHTML;
+    else document.querySelector(".right").innerHTML = document.getElementById('drill').innerHTML;
 };
 
 const reset = () => {
@@ -17,6 +21,9 @@ const reset = () => {
     num1 = undefined;
     num2 = undefined;
     document.getElementById('sums').innerHTML = '';
+    document.querySelector(".left").innerHTML = '';
+    document.querySelector(".operator").innerHTML = '';
+    document.querySelector(".right").innerHTML = '';
 };
 
 const op = () => {
@@ -27,6 +34,7 @@ const op = () => {
     operand = event.target.innerHTML;
     document.getElementById('oper').innerHTML = operand
     document.getElementById('drill').innerHTML = 0;
+    document.querySelector(".operator").innerHTML = event.target.innerHTML;
     console.log(num1); 
     console.log(num2); 
 };
@@ -70,5 +78,6 @@ const calcSum = () => {
     // document.getElementById('op').innerHTML = operand;
     // document.getElementById('drillNum2').innerHTML = num2;
     num1 = sum;
-
+    document.querySelector(".left").innerHTML = sum;
+    document.querySelector(".right").innerHTML = 0;
 };
