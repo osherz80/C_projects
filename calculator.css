@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+}
+
+.all{
+    padding: 15px;
+    margin: 50px auto;
+    height: fit-content;
+    width: 450px;
+    background: darkblue;
+    border-radius: 10px;
+}
+
+.drillDisplay{
+    width: 95%;
+    height: 60px;
+    margin: 5px auto;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.drillDisplay p{
+    width: fit-content;
+    margin: auto 2px;
+    font-size: 40px;
+    overflow: overlay;
+    text-align: end;
+}
+
+.dis{
+    height: 100%;
+    margin: 0 1px;
+    width: fit-content;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+}
+
+main{
+    height: 80%;
+    width: 100%;
+}
+
+.nums{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 30px;
+}
+
+.Box{
+    width: 90px;
+    height: 45px;
+    margin: 1%;
+    background: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+.Box:hover{
+cursor: pointer;
+}
+
+.pas{
+    width: 70%;
+    height: 2px;
+    background: black;
+    margin: 5% auto;
+}
+
+.operands{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.op{
+    width: 90px;
+    height: 45px;
+    margin: 2%;
+    background: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.op:hover{
+    cursor: pointer;
+}
