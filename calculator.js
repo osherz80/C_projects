@@ -57,9 +57,7 @@ const calcSum = () => {
             break;
     
         }
-    alert(sum);
 
-    
 
     let div = document.createElement('div');
     div.id = 'container';
